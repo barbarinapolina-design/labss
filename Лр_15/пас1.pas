@@ -1,7 +1,7 @@
 ﻿procedure lol (a: integer);//(a: integer)- параметризация
 begin
   print(a);
-  if a > 1 then //база рекурсии
+  if a > 1 then //база рекурсии (a=1; lol=0)
     lol(a-2);//декомпозиция
 end;
 begin

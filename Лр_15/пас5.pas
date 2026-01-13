@@ -5,5 +5,6 @@ begin
 end;
 
 begin
-  println('НОД(3430, 1365) = ', NOD(3430, 1365));
+  print('НОД(3430, 1365) =');
+  println(NOD(3430, 1365));
 end.

@@ -1,7 +1,7 @@
 ﻿procedure fib(i, n: integer);//(i, n: integer)-параметризация
 begin
   print(i + n);
-  if i + n < 89 then//база рекурсии
+  if i + n < 89 then//база рекурсии (i+n=1; fib=1)
     fib(n, i + n);//декомпозиция
 end;
 
