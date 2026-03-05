@@ -4,7 +4,6 @@
        next: PNode;
      end;
 
-// Создание нового узла
 function CreateNode(value: integer): PNode;
 var NewNode: PNode;
 begin
@@ -14,7 +13,6 @@ begin
   Result := NewNode;
 end;
 
-// Добавление узла в конец списка
 procedure AddLast(var Head: PNode; NewNode: PNode);
 var pp: PNode;
 begin
@@ -28,7 +26,6 @@ begin
   end;
 end;
 
-// Вывод списка на экран
 procedure PrintList(Head: PNode);
 var pp: PNode;
 begin
@@ -41,7 +38,6 @@ while pp <> nil do
 writeln;
 end;
 
-// Поиск максимального элемента в списке
 function FindMax(Head: PNode): integer;
 var pp: PNode;
     maxVal: integer;
@@ -57,7 +53,6 @@ begin
   Result := maxVal;
 end;
 
-// Поиск минимального элемента в списке
 function FindMin(Head: PNode): integer;
 var pp: PNode;
     minVal: integer;
@@ -73,7 +68,6 @@ begin
   Result := minVal;
 end;
 
-// Процедура для вывода максимального и минимального элементов
 procedure PrintMinMax(Head: PNode);
 begin
   writeln('Мах: ', FindMax(Head));
