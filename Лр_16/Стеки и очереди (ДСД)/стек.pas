@@ -4,7 +4,6 @@
        next: PNode;
      end;
 
-// Добавление элемента в стек (на вершину)
 procedure Push(var Head: PNode; x: integer);
 var NewNode: PNode;
 begin
@@ -14,7 +13,6 @@ begin
   Head := NewNode;
 end;
 
-// Извлечение элемента из стека (с вершины)
 function Pop(var Head: PNode): integer;
 var q: PNode;
 begin
@@ -31,7 +29,6 @@ begin
   Dispose(q);
 end;
 
-// Проверка, пуст ли стек
 function IsEmpty(Head: PNode): boolean;
 begin
   Result := (Head = nil);
