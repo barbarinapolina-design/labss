@@ -4,8 +4,7 @@
        count: integer;
        next: PNode;
      end;
-    
-// Создание нового узла
+
 function CreateNode(NewWord: string): PNode;
 var NewNode: PNode;
 begin
@@ -16,21 +15,18 @@ begin
   Result := NewNode;
 end;
 
-// Добавление узла в начало списка
 procedure AddFirst(var Head: PNode; NewNode: PNode);
 begin
   NewNode^.next := Head;
   Head := NewNode;
 end;
 
-// Добавление узла после заданного узла p
 procedure AddAfter(p, NewNode: PNode);
 begin
   NewNode^.next := p^.next;
   p^.next := NewNode;
 end;
 
-// Поиск места для вставки нового слова (сохраняя алфавитный порядок)
 function FindPlace(Head: PNode; NewWord: string): PNode;
 var pp: PNode;
 begin
@@ -40,22 +36,20 @@ begin
   Result := pp;
 end;
 
-// Добавление узла перед заданным узлом p
 procedure AddBefore(var Head: PNode; p, NewNode: PNode);
 var pp: PNode;
 begin
   if p = Head then
-    AddFirst(Head, NewNode)  // добавление в начало списка
+    AddFirst(Head, NewNode)
   else begin
     pp := Head;
-    while (pp <> nil) and (pp^.next <> p) do // поиск узла, за которым следует узел p
+    while (pp <> nil) and (pp^.next <> p) do
       pp := pp^.next;
     if pp <> nil then 
       AddAfter(pp, NewNode);
   end;
 end;
 
-// Поиск слова в списке
 function Find(Head: PNode; NewWord: string): PNode;
 var pp: PNode;
 begin
@@ -65,7 +59,6 @@ begin
   Result := pp;
 end;
 
-// Чтение одного слова из файла
 function TakeWord(var f: Text): string;
 var c: char;
 begin
@@ -80,7 +73,6 @@ begin
   end;
 end;
 
-// Подсчет количества элементов в списке
 function CountElements(Head: PNode): integer;
 var pp: PNode;
     cnt: integer;
@@ -95,7 +87,6 @@ begin
   Result := cnt;
 end;
 
-// Вывод списка на экран
 procedure PrintList(Head: PNode);
 var pp: PNode;
 begin
@@ -113,30 +104,25 @@ var f: Text;
     Head: PNode;
     FoundNode, PlaceNode, NewNode: PNode;
 begin
-  Head := nil; // инициализация пустого списка
+  Head := nil;
   assign(f, 'text.txt');
   reset(f);
   
-  // Основной алгоритм обработки
   while not eof(f) do
   begin
-    WordRead := TakeWord(f); // считываем слово
-    if WordRead <> '' then // если слово не пустое
+    WordRead := TakeWord(f);
+    if WordRead <> '' then 
     begin
-      FoundNode := Find(Head, WordRead); // ищем слово в списке
+      FoundNode := Find(Head, WordRead); 
       if FoundNode <> nil then
          FoundNode^.count := FoundNode^.count + 1
       else
       begin
-        // слово не найдено - создаем новый узел
         NewNode := CreateNode(WordRead);
-        // ищем место для вставки по алфавиту
         PlaceNode := FindPlace(Head, WordRead);
         if PlaceNode = nil then
-          // вставляем в конец списка
           AddBefore(Head, nil, NewNode)
         else
-          // вставляем перед найденным узлом
           AddBefore(Head, PlaceNode, NewNode);
       end;
     end;
@@ -153,5 +139,4 @@ begin
     pp := pp^.next;
     Dispose(temp);
   end;
-
 end.
