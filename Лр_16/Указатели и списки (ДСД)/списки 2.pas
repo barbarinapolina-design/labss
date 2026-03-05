@@ -3,8 +3,7 @@
        data: integer;
        next: PNode;
      end;
-  
-// Создание нового узла
+
 function CreateNode(value: integer): PNode;
 var NewNode: PNode;
 begin
@@ -14,7 +13,6 @@ begin
   Result := NewNode;
 end;
 
-// Добавление узла в конец списка
 procedure AddLast(var Head: PNode; NewNode: PNode);
 var pp: PNode;
 begin
@@ -28,7 +26,6 @@ begin
   end;
 end;
 
-// Вывод всего списка
 procedure PrintList(Head: PNode);
 var pp: PNode;
 begin
@@ -41,7 +38,6 @@ while pp <> nil do
 writeln;
 end;
 
-// Вывод только четных элементов списка
 procedure PrintEvenElements(Head: PNode);
 var pp: PNode;
     found: boolean;
@@ -78,4 +74,5 @@ begin
     pp := pp^.next;
     Dispose(temp);
   end;
+
 end.
