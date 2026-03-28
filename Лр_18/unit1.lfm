@@ -1,0 +1,94 @@
+object Form1Function: TForm1Function
+  Left = 892
+  Height = 300
+  Top = 11
+  Width = 400
+  Caption = 'Алгебра'
+  ClientHeight = 300
+  ClientWidth = 400
+  DesignTimePPI = 120
+  LCLVersion = '4.6.0.0'
+  object Label1: TLabel
+    Left = 22
+    Height = 20
+    Top = 28
+    Width = 110
+    Caption = 'Значение х (>1)'
+    OnClick = Label1Click
+  end
+  object Label2: TLabel
+    Left = 22
+    Height = 20
+    Top = 110
+    Width = 131
+    Caption = 'Значение функции'
+  end
+  object Edit1: TEdit
+    Left = 165
+    Height = 28
+    Top = 28
+    Width = 116
+    TabOrder = 0
+  end
+  object Edit2: TEdit
+    Left = 165
+    Height = 28
+    Top = 110
+    Width = 116
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 22
+    Height = 25
+    Top = 150
+    Width = 112
+    Caption = 'Вычислить'
+    TabOrder = 2
+    OnClick = Button1Click
+  end
+  object BitBtn1: TBitBtn
+    Left = 240
+    Height = 30
+    Top = 250
+    Width = 131
+    Caption = 'К заданию 2'
+    Kind = bkRetry
+    ModalResult = 4
+    TabOrder = 3
+    OnClick = BitBtn1Click
+  end
+  object Label3: TLabel
+    Left = 22
+    Height = 20
+    Top = 66
+    Width = 78
+    Caption = 'Значение у'
+  end
+  object Edit3: TEdit
+    Left = 165
+    Height = 28
+    Top = 66
+    Width = 116
+    TabOrder = 4
+  end
+  object BitBtn2: TBitBtn
+    Left = 22
+    Height = 38
+    Top = 242
+    Width = 94
+    Caption = 'Выход'
+    Kind = bkClose
+    ModalResult = 11
+    TabOrder = 5
+    OnClick = BitBtn2Click
+  end
+  object Button2: TButton
+    Left = 22
+    Height = 29
+    Top = 188
+    Width = 108
+    Caption = 'Очистить'
+    TabOrder = 6
+    OnClick = Button2Click
+  end
+end
