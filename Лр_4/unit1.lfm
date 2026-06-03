@@ -1,0 +1,267 @@
+object frmCalculator: TfrmCalculator
+  Left = 375
+  Height = 315
+  Top = 224
+  Width = 266
+  AlphaBlend = True
+  Caption = 'Калькулятор'
+  ClientHeight = 315
+  ClientWidth = 266
+  Color = 15381376
+  DesignTimePPI = 120
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clMaroon
+  Font.Height = -21
+  Font.Name = 'Segoe Print'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  Position = poScreenCenter
+  LCLVersion = '4.6.0.0'
+  Scaled = False
+  OnCreate = FormCreate
+  object edtResult: TEdit
+    Left = 16
+    Height = 39
+    Top = 16
+    Width = 235
+    Alignment = taRightJustify
+    Color = clCream
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clNavy
+    Font.Height = -23
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object btnBackspace: TButton
+    Left = 16
+    Height = 40
+    Top = 64
+    Width = 91
+    Caption = '<-'
+    Color = 16595277
+    TabOrder = 1
+    OnClick = btnBackspaceClick
+  end
+  object btn7: TButton
+    Left = 16
+    Height = 40
+    Top = 112
+    Width = 43
+    Caption = '7'
+    TabOrder = 5
+    OnClick = btn7Click
+  end
+  object btn8: TButton
+    Left = 64
+    Height = 40
+    Top = 112
+    Width = 43
+    Caption = '8'
+    TabOrder = 6
+    OnClick = btn8Click
+  end
+  object btn9: TButton
+    Left = 112
+    Height = 40
+    Top = 112
+    Width = 43
+    Caption = '9'
+    TabOrder = 7
+    OnClick = btn9Click
+  end
+  object btnDiv: TButton
+    Left = 160
+    Height = 40
+    Top = 112
+    Width = 43
+    Caption = '/'
+    TabOrder = 8
+    OnClick = btnDivClick
+  end
+  object btnSquare: TButton
+    Left = 208
+    Height = 40
+    Top = 112
+    Width = 43
+    Caption = 'x^2'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -18
+    Font.Name = 'Segoe Print'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 9
+    OnClick = btnSquareClick
+  end
+  object btn4: TButton
+    Left = 16
+    Height = 40
+    Top = 160
+    Width = 43
+    Caption = '4'
+    TabOrder = 10
+    OnClick = btn4Click
+  end
+  object btn5: TButton
+    Left = 64
+    Height = 40
+    Top = 160
+    Width = 43
+    Caption = '5'
+    TabOrder = 11
+    OnClick = btn5Click
+  end
+  object btn6: TButton
+    Left = 112
+    Height = 40
+    Top = 160
+    Width = 43
+    Caption = '6'
+    TabOrder = 12
+    OnClick = btn6Click
+  end
+  object btn1: TButton
+    Left = 16
+    Height = 40
+    Top = 208
+    Width = 43
+    Caption = '1'
+    TabOrder = 15
+    OnClick = btn1Click
+  end
+  object btn2: TButton
+    Left = 64
+    Height = 40
+    Top = 208
+    Width = 43
+    Caption = '2'
+    TabOrder = 16
+    OnClick = btn2Click
+  end
+  object btn3: TButton
+    Left = 112
+    Height = 40
+    Top = 208
+    Width = 43
+    Caption = '3'
+    TabOrder = 17
+    OnClick = btn3Click
+  end
+  object btn0: TButton
+    Left = 16
+    Height = 40
+    Top = 256
+    Width = 91
+    Caption = '0'
+    Color = clCream
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -20
+    Font.Name = 'Segoe Print'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 19
+    OnClick = btn0Click
+  end
+  object btnDecimal: TButton
+    Left = 112
+    Height = 40
+    Top = 256
+    Width = 43
+    Caption = ','
+    TabOrder = 20
+    OnClick = btnDecimalClick
+  end
+  object btnAdd: TButton
+    Left = 160
+    Height = 40
+    Top = 256
+    Width = 43
+    Caption = '+'
+    TabOrder = 21
+    OnClick = btnAddClick
+  end
+  object btnSub: TButton
+    Left = 160
+    Height = 40
+    Top = 208
+    Width = 43
+    Caption = '-'
+    TabOrder = 18
+    OnClick = btnSubClick
+  end
+  object btnMul: TButton
+    Left = 160
+    Height = 40
+    Top = 160
+    Width = 43
+    Caption = '*'
+    TabOrder = 13
+    OnClick = btnMulClick
+  end
+  object btnEquals: TButton
+    Left = 208
+    Height = 88
+    Top = 208
+    Width = 43
+    Caption = '='
+    TabOrder = 22
+    OnClick = btnEqualsClick
+  end
+  object btnInverse: TButton
+    Left = 208
+    Height = 40
+    Top = 160
+    Width = 43
+    Caption = '1/x'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -18
+    Font.Name = 'Segoe Print'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 14
+    OnClick = btnInverseClick
+  end
+  object btnSqrt: TButton
+    Left = 208
+    Height = 40
+    Top = 64
+    Width = 43
+    Caption = 'Kop'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -18
+    Font.Name = 'Segoe Print'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 4
+    OnClick = btnSqrtClick
+  end
+  object btnClearAll: TButton
+    Left = 160
+    Height = 40
+    Top = 64
+    Width = 43
+    Caption = 'c'
+    TabOrder = 3
+    OnClick = btnClearAllClick
+  end
+  object btnClearEntry: TButton
+    Left = 112
+    Height = 40
+    Top = 64
+    Width = 43
+    Caption = 'ce'
+    TabOrder = 2
+    OnClick = btnClearEntryClick
+  end
+end
