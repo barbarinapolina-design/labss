@@ -1,0 +1,229 @@
+object Form1: TForm1
+  Left = -41
+  Height = 397
+  Top = 402
+  Width = 845
+  Caption = 'Записи приема'
+  ClientHeight = 397
+  ClientWidth = 845
+  Menu = MainMenu1
+  LCLVersion = '4.6.0.0'
+  OnCreate = FormCreate
+  object StringGrid1: TStringGrid
+    Left = 8
+    Height = 229
+    Top = 11
+    Width = 824
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    FixedCols = 0
+    RowCount = 2
+    TabOrder = 0
+    ColWidths = (
+      107
+      171
+      181
+      91
+      253
+    )
+    Cells = (
+      5
+      0
+      0
+      'Номер карты'
+      1
+      0
+      'ФИО'
+      2
+      0
+      'Диагноз'
+      3
+      0
+      'Дата приема'
+      4
+      0
+      'Врач'
+    )
+  end
+  object edCard: TEdit
+    Left = 96
+    Height = 23
+    Top = 288
+    Width = 160
+    Anchors = [akLeft, akBottom]
+    TabOrder = 1
+  end
+  object edDiagnosis: TEdit
+    Left = 96
+    Height = 23
+    Top = 323
+    Width = 160
+    Anchors = [akLeft, akBottom]
+    TabOrder = 2
+  end
+  object edName: TEdit
+    Left = 352
+    Height = 23
+    Top = 288
+    Width = 320
+    Anchors = [akLeft, akBottom]
+    TabOrder = 3
+  end
+  object edDoctor: TEdit
+    Left = 352
+    Height = 23
+    Top = 323
+    Width = 320
+    Anchors = [akLeft, akBottom]
+    TabOrder = 4
+  end
+  object Label1: TLabel
+    Left = 8
+    Height = 15
+    Top = 289
+    Width = 77
+    Anchors = [akLeft, akBottom]
+    Caption = 'Номер карты:'
+  end
+  object Label2: TLabel
+    Left = 37
+    Height = 15
+    Top = 326
+    Width = 48
+    Anchors = [akLeft, akBottom]
+    Caption = 'Диагноз:'
+  end
+  object Label3: TLabel
+    Left = 56
+    Height = 15
+    Top = 362
+    Width = 28
+    Anchors = [akLeft, akBottom]
+    Caption = 'Дата:'
+  end
+  object Label4: TLabel
+    Left = 312
+    Height = 15
+    Top = 288
+    Width = 30
+    Anchors = [akLeft, akBottom]
+    Caption = 'ФИО:'
+  end
+  object Label5: TLabel
+    Left = 312
+    Height = 15
+    Top = 326
+    Width = 30
+    Anchors = [akLeft, akBottom]
+    Caption = 'Врач:'
+  end
+  object dtpDate: TDateTimePicker
+    Left = 96
+    Height = 23
+    Top = 360
+    Width = 79
+    CenturyFrom = 1941
+    MaxDate = 2958465
+    MinDate = -53780
+    TabOrder = 5
+    TrailingSeparator = False
+    TextForNullDate = 'NULL'
+    LeadingZeros = True
+    Anchors = [akLeft, akBottom]
+    Kind = dtkDate
+    TimeFormat = tf24
+    TimeDisplay = tdHMS
+    DateMode = dmComboBox
+    Date = 46175
+    Time = 0.976243090277421
+    UseDefaultSeparators = True
+    HideDateTimeParts = []
+    MonthNames = 'Long'
+  end
+  object Label6: TLabel
+    Left = 8
+    Height = 17
+    Top = 253
+    Width = 161
+    Anchors = [akLeft, akBottom]
+    Caption = 'Заполните информацию:'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -13
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object MainMenu1: TMainMenu
+    Left = 664
+    Top = 456
+    object miFile: TMenuItem
+      Caption = 'Файл'
+      object miNew: TMenuItem
+        Caption = 'Новый'
+        OnClick = miNewClick
+      end
+      object miOpen: TMenuItem
+        Caption = 'Открыть'
+        OnClick = miOpenClick
+      end
+      object miSave: TMenuItem
+        Caption = 'Сохранить'
+        OnClick = miSaveClick
+      end
+      object miSaveAs: TMenuItem
+        Caption = 'Сохранить как'
+        OnClick = miSaveAsClick
+      end
+      object miClose: TMenuItem
+        Caption = 'Закрыть'
+        OnClick = miCloseClick
+      end
+      object miExit: TMenuItem
+        Caption = 'Выход'
+        OnClick = miExitClick
+      end
+    end
+    object miRecord: TMenuItem
+      Caption = 'Запись'
+      object miAdd: TMenuItem
+        Caption = 'Добавить'
+        OnClick = miAddClick
+      end
+      object miEdit: TMenuItem
+        Caption = 'Редактировать'
+        OnClick = miEditClick
+      end
+      object miDelete: TMenuItem
+        Caption = 'Удалить'
+        OnClick = miDeleteClick
+      end
+      object miSort: TMenuItem
+        Caption = 'Сортировка'
+        object miSortAsc: TMenuItem
+          Caption = 'По возрастанию'
+          OnClick = miSortAscClick
+        end
+        object miSortDesc: TMenuItem
+          Caption = 'По убыванию'
+          OnClick = miSortDescClick
+        end
+      end
+      object miSearch: TMenuItem
+        Caption = 'Поиск'
+        OnClick = miSearchClick
+      end
+      object miClear: TMenuItem
+        Caption = 'Очистить'
+        OnClick = miClearClick
+      end
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 664
+    Top = 408
+  end
+  object SaveDialog1: TSaveDialog
+    Left = 664
+    Top = 512
+  end
+end
